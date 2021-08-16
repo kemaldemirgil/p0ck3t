@@ -29,6 +29,3 @@ class Database:
     self.conn.close()
 
 db = Database("pw.db")
-# db.insert("facebook", "asdasd")
-# db.insert("twitter", "qweqwe")
-# db.insert("email", "asdasd")
