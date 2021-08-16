@@ -5,7 +5,10 @@ from db import Database
 db = Database("pw.db")
 
 
-
+background_color = "#262626"
+button_color = "#3a3a3a"
+button_text = "#1f9b00"
+input_color = "#969696"
 
 def populate_list():
   password_list.delete(0, END)
@@ -57,19 +60,19 @@ app = Tk()
 
 # acc
 acc_text = StringVar()
-acc_label = Label(app, text="account", font=("bold, 14"), pady=5)
+acc_label = Label(app, text="account", font=("bold, 14"), pady=5, bg=background_color, fg=button_text)
 acc_label.grid(row=0, column=0, sticky=W, padx=10)
-acc_entry = Entry(app, textvariable=acc_text)
+acc_entry = Entry(app, textvariable=acc_text, bg=input_color, relief="flat")
 acc_entry.grid(row=0, column=1)
 # pw
 pw_text = StringVar()
-pw_label = Label(app, text="password", font=("bold, 14"))
+pw_label = Label(app, text="password", font=("bold, 14"), bg=background_color, fg=button_text)
 pw_label.grid(row=1, column=0, sticky=W, padx=10)
-pw_entry = Entry(app, textvariable=pw_text)
+pw_entry = Entry(app, textvariable=pw_text, bg=input_color, relief="flat")
 pw_entry.grid(row=1, column=1)
 
 # passwords list (listbox)
-password_list = Listbox(app, height=8, width=50)
+password_list = Listbox(app, height=8, width=50, bg=input_color, relief="flat")
 password_list.grid(row=4, column=0, columnspan=3, rowspan=6, pady=10, padx=10)
 # create scrollbar
 scrollbar = Scrollbar(app)
@@ -81,22 +84,23 @@ scrollbar.configure(command=password_list.yview)
 password_list.bind("<<ListboxSelect>>", select_item)
 
 # buttons
-add_btn = Button(app, text="add", width=12, command=add_item)
+add_btn = Button(app, text="add", width=12, command=add_item, bg=button_color, fg=button_text, activebackground=button_color, activeforeground=button_text, relief="flat")
 add_btn.grid(row=2, column=0, pady=10)
 
-remove_btn = Button(app, text="remove", width=12, command=remove_item)
+remove_btn = Button(app, text="remove", width=12, command=remove_item, bg=button_color, fg=button_text, activebackground=button_color, activeforeground=button_text, relief="flat")
 remove_btn.grid(row=2, column=1)
 
-update_btn = Button(app, text="update", width=12, command=update_item)
+update_btn = Button(app, text="update", width=12, command=update_item, bg=button_color, fg=button_text, activebackground=button_color, activeforeground=button_text, relief="flat")
 update_btn.grid(row=3, column=0)
 
-clear_btn = Button(app, text="clear input", width=12, command=clear_text)
+clear_btn = Button(app, text="clear input", width=12, command=clear_text, bg=button_color, fg=button_text, activebackground=button_color, activeforeground=button_text, relief="flat")
 clear_btn.grid(row=3, column=1)
 
 
 
 app.title("p0ck3t")
 app.geometry("350x300")
+app.configure(bg=background_color)
 
 # populate data
 populate_list()
