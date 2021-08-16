@@ -8,22 +8,27 @@
 
 ![](assets/ss.png)
 
-## Usage
+### Usage
 
+#### ***Install dependencies***
 ```bash
-# Install dependencies
 pipenv install
+```
 
-# Run script
+#### ***Run script***
+```bash
 python w4ll3t.py
+```
 
+> compiled with pyinstaller
 
-# Compiled with Pyinstaller
-
-# Windows
+#### ***Windows***
+```bash
 pyinstaller --onefile --windowed w4ll3t.py
+```
 
-# MacOS
+#### ***MacOS***
+```bash
 pyinstaller --onefile --add-binary='/System/Library/Frameworks/Tk.framework/Tk':'tk' --add-binary='/System/Library/Frameworks/Tcl.framework/Tcl':'tcl' w4ll3t.py
 ```
 
