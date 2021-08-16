@@ -1,4 +1,4 @@
-# p0k3t
+# p0ck3t
 
 ![GitHub top language](https://img.shields.io/github/languages/top/kemaldemirgil/p0ck3t?color=blue&label=Python&logo=python)
 ![GitHub](https://img.shields.io/github/license/kemaldemirgil/p0ck3t?color=purple&label=License&logo=github&logoColor=purple)
